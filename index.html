@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">VeloraMart</div>
+        <nav>
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#products-section" class="product-icon">Products</a></li>
+                <li><a href="#cart-section">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Banner Section with Background Color -->
+<section class="banner" id="banner">
+    <div class="banner-text">
+        <h1>Welcome to VeloraMart</h1>
+        <p>Find the best products at unbeatable prices!</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </div>
+</section>
+
+
+    <!-- Filter and Sort Section -->
+    <section class="filter-sort">
+        <div class="filter">
+            <h4>Filter by Category</h4>
+            <button onclick="filterByCategory('Electronics')">Electronics</button>
+            <button onclick="filterByCategory('Clothing')">Clothing</button>
+            <button onclick="filterByCategory('Home Appliances')">Home Appliances</button>
+            <button onclick="clearFilter()">Clear Filter</button>
+        </div>
+        <div class="sort">
+            <h4>Sort by Price</h4>
+            <select id="sort-options" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="low-high">Low to High</option>
+                <option value="high-low">High to Low</option>
+            </select>
+        </div>
+    </section>
+    <!-- Product Section -->
+<section id="products-section">
+    <div class="products">
+        <!-- Product cards will be rendered here -->
+    </div>
+</section>
+
+    <!-- Product Listing -->
+    <section class="products" id="product-list"></section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShopEasy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
